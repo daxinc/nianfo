@@ -1,0 +1,628 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B08DF842735CD7C00F069FE /* NianFo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DF832735CD7C00F069FE /* NianFo.swift */; };
+		8B08DF862735CD7C00F069FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DF852735CD7C00F069FE /* ContentView.swift */; };
+		8B08DF882735CD7E00F069FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B08DF872735CD7E00F069FE /* Assets.xcassets */; };
+		8B08DF8B2735CD7E00F069FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B08DF8A2735CD7E00F069FE /* Preview Assets.xcassets */; };
+		8B08DF952735CD7E00F069FE /* nianfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DF942735CD7E00F069FE /* nianfoTests.swift */; };
+		8B08DF9F2735CD7E00F069FE /* nianfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DF9E2735CD7E00F069FE /* nianfoUITests.swift */; };
+		8B08DFA12735CD7E00F069FE /* nianfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B08DFA02735CD7E00F069FE /* nianfoUITestsLaunchTests.swift */; };
+		8B08DFAE2735DA2000F069FE /* fo.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8B08DFAD2735DA2000F069FE /* fo.m4a */; };
+		8B8059F62736F5CC003BF9CA /* CountDownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8059F52736F5CB003BF9CA /* CountDownManager.swift */; };
+		8B8059F82736FB4C003BF9CA /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8059F72736FB4C003BF9CA /* AudioPlayerManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B08DF912735CD7E00F069FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B08DF782735CD7C00F069FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B08DF7F2735CD7C00F069FE;
+			remoteInfo = nianfo;
+		};
+		8B08DF9B2735CD7E00F069FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B08DF782735CD7C00F069FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B08DF7F2735CD7C00F069FE;
+			remoteInfo = nianfo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B08DF802735CD7C00F069FE /* Chanting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chanting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B08DF832735CD7C00F069FE /* NianFo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NianFo.swift; sourceTree = "<group>"; };
+		8B08DF852735CD7C00F069FE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8B08DF872735CD7E00F069FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B08DF8A2735CD7E00F069FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B08DF902735CD7E00F069FE /* ChantingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChantingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B08DF942735CD7E00F069FE /* nianfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nianfoTests.swift; sourceTree = "<group>"; };
+		8B08DF9A2735CD7E00F069FE /* ChantingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChantingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B08DF9E2735CD7E00F069FE /* nianfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nianfoUITests.swift; sourceTree = "<group>"; };
+		8B08DFA02735CD7E00F069FE /* nianfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nianfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B08DFAD2735DA2000F069FE /* fo.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fo.m4a; sourceTree = "<group>"; };
+		8B8059F52736F5CB003BF9CA /* CountDownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownManager.swift; sourceTree = "<group>"; };
+		8B8059F72736FB4C003BF9CA /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		8B8059F92737197C003BF9CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B08DF7D2735CD7C00F069FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF8D2735CD7E00F069FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF972735CD7E00F069FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B08DF772735CD7C00F069FE = {
+			isa = PBXGroup;
+			children = (
+				8B08DF822735CD7C00F069FE /* nianfo */,
+				8B08DF932735CD7E00F069FE /* nianfoTests */,
+				8B08DF9D2735CD7E00F069FE /* nianfoUITests */,
+				8B08DF812735CD7C00F069FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B08DF812735CD7C00F069FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B08DF802735CD7C00F069FE /* Chanting.app */,
+				8B08DF902735CD7E00F069FE /* ChantingTests.xctest */,
+				8B08DF9A2735CD7E00F069FE /* ChantingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B08DF822735CD7C00F069FE /* nianfo */ = {
+			isa = PBXGroup;
+			children = (
+				8B8059F92737197C003BF9CA /* Info.plist */,
+				8B08DF832735CD7C00F069FE /* NianFo.swift */,
+				8B08DF852735CD7C00F069FE /* ContentView.swift */,
+				8B08DF872735CD7E00F069FE /* Assets.xcassets */,
+				8B08DFAD2735DA2000F069FE /* fo.m4a */,
+				8B08DF892735CD7E00F069FE /* Preview Content */,
+				8B8059F52736F5CB003BF9CA /* CountDownManager.swift */,
+				8B8059F72736FB4C003BF9CA /* AudioPlayerManager.swift */,
+			);
+			path = nianfo;
+			sourceTree = "<group>";
+		};
+		8B08DF892735CD7E00F069FE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8B08DF8A2735CD7E00F069FE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8B08DF932735CD7E00F069FE /* nianfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B08DF942735CD7E00F069FE /* nianfoTests.swift */,
+			);
+			path = nianfoTests;
+			sourceTree = "<group>";
+		};
+		8B08DF9D2735CD7E00F069FE /* nianfoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B08DF9E2735CD7E00F069FE /* nianfoUITests.swift */,
+				8B08DFA02735CD7E00F069FE /* nianfoUITestsLaunchTests.swift */,
+			);
+			path = nianfoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B08DF7F2735CD7C00F069FE /* Chanting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B08DFA42735CD7E00F069FE /* Build configuration list for PBXNativeTarget "Chanting" */;
+			buildPhases = (
+				8B08DF7C2735CD7C00F069FE /* Sources */,
+				8B08DF7D2735CD7C00F069FE /* Frameworks */,
+				8B08DF7E2735CD7C00F069FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Chanting;
+			productName = nianfo;
+			productReference = 8B08DF802735CD7C00F069FE /* Chanting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B08DF8F2735CD7E00F069FE /* ChantingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B08DFA72735CD7E00F069FE /* Build configuration list for PBXNativeTarget "ChantingTests" */;
+			buildPhases = (
+				8B08DF8C2735CD7E00F069FE /* Sources */,
+				8B08DF8D2735CD7E00F069FE /* Frameworks */,
+				8B08DF8E2735CD7E00F069FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B08DF922735CD7E00F069FE /* PBXTargetDependency */,
+			);
+			name = ChantingTests;
+			productName = nianfoTests;
+			productReference = 8B08DF902735CD7E00F069FE /* ChantingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B08DF992735CD7E00F069FE /* ChantingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B08DFAA2735CD7E00F069FE /* Build configuration list for PBXNativeTarget "ChantingUITests" */;
+			buildPhases = (
+				8B08DF962735CD7E00F069FE /* Sources */,
+				8B08DF972735CD7E00F069FE /* Frameworks */,
+				8B08DF982735CD7E00F069FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B08DF9C2735CD7E00F069FE /* PBXTargetDependency */,
+			);
+			name = ChantingUITests;
+			productName = nianfoUITests;
+			productReference = 8B08DF9A2735CD7E00F069FE /* ChantingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B08DF782735CD7C00F069FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					8B08DF7F2735CD7C00F069FE = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					8B08DF8F2735CD7E00F069FE = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8B08DF7F2735CD7C00F069FE;
+					};
+					8B08DF992735CD7E00F069FE = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8B08DF7F2735CD7C00F069FE;
+					};
+				};
+			};
+			buildConfigurationList = 8B08DF7B2735CD7C00F069FE /* Build configuration list for PBXProject "Chanting" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B08DF772735CD7C00F069FE;
+			productRefGroup = 8B08DF812735CD7C00F069FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B08DF7F2735CD7C00F069FE /* Chanting */,
+				8B08DF8F2735CD7E00F069FE /* ChantingTests */,
+				8B08DF992735CD7E00F069FE /* ChantingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B08DF7E2735CD7C00F069FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B08DFAE2735DA2000F069FE /* fo.m4a in Resources */,
+				8B08DF8B2735CD7E00F069FE /* Preview Assets.xcassets in Resources */,
+				8B08DF882735CD7E00F069FE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF8E2735CD7E00F069FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF982735CD7E00F069FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B08DF7C2735CD7C00F069FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B08DF862735CD7C00F069FE /* ContentView.swift in Sources */,
+				8B8059F82736FB4C003BF9CA /* AudioPlayerManager.swift in Sources */,
+				8B8059F62736F5CC003BF9CA /* CountDownManager.swift in Sources */,
+				8B08DF842735CD7C00F069FE /* NianFo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF8C2735CD7E00F069FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B08DF952735CD7E00F069FE /* nianfoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B08DF962735CD7E00F069FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B08DF9F2735CD7E00F069FE /* nianfoUITests.swift in Sources */,
+				8B08DFA12735CD7E00F069FE /* nianfoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B08DF922735CD7E00F069FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B08DF7F2735CD7C00F069FE /* Chanting */;
+			targetProxy = 8B08DF912735CD7E00F069FE /* PBXContainerItemProxy */;
+		};
+		8B08DF9C2735CD7E00F069FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B08DF7F2735CD7C00F069FE /* Chanting */;
+			targetProxy = 8B08DF9B2735CD7E00F069FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8B08DFA22735CD7E00F069FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B08DFA32735CD7E00F069FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B08DFA52735CD7E00F069FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nianfo/Preview Content\"";
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nianfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chanting;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.chanting;
+				PRODUCT_NAME = Chanting;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B08DFA62735CD7E00F069FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"nianfo/Preview Content\"";
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = nianfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Chanting;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.chanting;
+				PRODUCT_NAME = Chanting;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B08DFA82735CD7E00F069FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.nianfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chanting.app/Chanting";
+			};
+			name = Debug;
+		};
+		8B08DFA92735CD7E00F069FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.nianfoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Chanting.app/Chanting";
+			};
+			name = Release;
+		};
+		8B08DFAB2735CD7E00F069FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.nianfoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nianfo;
+			};
+			name = Debug;
+		};
+		8B08DFAC2735CD7E00F069FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SQR8J455;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = daxinc.nianfoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = nianfo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B08DF7B2735CD7C00F069FE /* Build configuration list for PBXProject "Chanting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B08DFA22735CD7E00F069FE /* Debug */,
+				8B08DFA32735CD7E00F069FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B08DFA42735CD7E00F069FE /* Build configuration list for PBXNativeTarget "Chanting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B08DFA52735CD7E00F069FE /* Debug */,
+				8B08DFA62735CD7E00F069FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B08DFA72735CD7E00F069FE /* Build configuration list for PBXNativeTarget "ChantingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B08DFA82735CD7E00F069FE /* Debug */,
+				8B08DFA92735CD7E00F069FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B08DFAA2735CD7E00F069FE /* Build configuration list for PBXNativeTarget "ChantingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B08DFAB2735CD7E00F069FE /* Debug */,
+				8B08DFAC2735CD7E00F069FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B08DF782735CD7C00F069FE /* Project object */;
+}
