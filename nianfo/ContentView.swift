@@ -72,7 +72,7 @@ struct ContentView: View {
                 .accessibilityIdentifier("remaining-time")
                 
                 HStack {
-                    Button("Play") {
+                    Button("Start") {
                         play()
                     }
                     .frame(width: 80, height: 20)
