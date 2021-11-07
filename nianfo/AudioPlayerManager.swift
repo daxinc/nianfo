@@ -14,66 +14,51 @@ enum PlayerState {
 
 class AudioPlayerManager: NSObject, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer
-    var playerState : PlayerState
+    var playerState: PlayerState
     
-    var startTime = 0
-    var timeLeft = 0
-
-    // If the play is set to keep playing until being stopped
-    var endlessMode = false
+    // EPOCH time when the player should stop
+    var endTime = 0.0
     
     override init() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [.mixWithOthers, .allowAirPlay])
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print(error)
+        }
+        
         let sound = Bundle.main.path(forResource: "fo.m4a", ofType: nil)
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
         playerState = PlayerState.stopped
     }
     
+    func play(durationSeconds: Int) {
+        // if there's no duration, play indefinitely
+        if durationSeconds > 0 {
+            endTime = Date().timeIntervalSince1970 + Double(durationSeconds)
+        }
+        setState(state: .playing)
+    }
+    
     func setState(state: PlayerState) {
         playerState = state
+        
         if state == .playing && !audioPlayer.isPlaying {
             audioPlayer.play()
             audioPlayer.delegate = self
         }
     }
     
-    func play(duration: Int) {
-        if duration == 0 {
-            self.endlessMode = true
-        } else {
-            self.startTime = Int(Date().timeIntervalSince1970)
-            self.timeLeft = duration
-        }
-
-        self.audioPlayer.delegate = self
-        self.playerState = PlayerState.playing
-        
-        self.audioPlayer.play()
-    }
-    
-    func pause() {
-        self.playerState = PlayerState.paused
-    }
-    
-    func resume() {
-        self.playerState = PlayerState.playing
-        if !self.audioPlayer.isPlaying {
-            self.audioPlayer.play()
-        }
-    }
-    
-    func stop() {
-        playerState = PlayerState.stopped
-    }
-    
-    func getTimeLeft() -> Int {
-        return timeLeft
-    }
-
     internal func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         player.stop()
         
         if playerState == .playing {
-            player.play()
+            if endTime > 1 && endTime < Date().timeIntervalSince1970 {
+//                print("stop playing because passed " + String(endTime))
+                playerState = .stopped
+            } else {
+                player.play()
+            }
         }
     }
 }

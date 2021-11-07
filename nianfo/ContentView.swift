@@ -7,19 +7,26 @@
 
 import SwiftUI
 
+var SessionStateStarted = "started"
+var SessionStatePaused = "paused"
+var SessionStateStopped = "stopped"
+
 struct ContentView: View {
     @State var player = AudioPlayerManager()
     @ObservedObject var countDownManager = CountDownManager()
-
+    
     @State var playerState = PlayerState.stopped
-
-    // how many seconds left before audio stops
-    @State var secondsLeft = 0
-
     @State var sessionDurationMinutes = 60
     @State var eternalSessionDuration = false
     
     @State var configurationMode = false
+    
+    
+    @SceneStorage("ContentView.sessionSetBackTime") private var sessionSetBackTimeStore = 0.0
+    @SceneStorage("ContentView.sessionState") private var sessionStateStore = SessionStateStopped
+    @SceneStorage("ContentView.sessionDurationMinutes") private var sessionDurationMinutesStore = 0
+    @SceneStorage("ContentView.isSessionEternal") private var isSessionEternalStore = false
+    @SceneStorage("ContentView.sessionRemainingSeconds") private var remainingSecondsStore = 0
     
     @Environment(\.scenePhase) var scenePhase
     
@@ -69,7 +76,7 @@ struct ContentView: View {
             } else {
                 Text(getRemainingTimeText())
                     .padding()
-                .accessibilityIdentifier("remaining-time")
+                    .accessibilityIdentifier("remaining-time")
                 
                 HStack {
                     Button("Start") {
@@ -98,6 +105,50 @@ struct ContentView: View {
                 }
             }
         }
+        .onChange(of: scenePhase) {phase in
+            if phase == .active {
+                eternalSessionDuration = isSessionEternalStore
+                if sessionDurationMinutesStore > 0 {
+                    sessionDurationMinutes = sessionDurationMinutesStore
+                }
+                
+                if sessionStateStore == SessionStatePaused {
+                    countDownManager.setRemaining(remaining: remainingSecondsStore)
+                    playerState = .paused
+                } else if sessionStateStore == SessionStateStarted {
+                    // check if the session still active
+                    let timePassed = Int(Date().timeIntervalSince1970 - sessionSetBackTimeStore)
+                    if timePassed < remainingSecondsStore {
+                        countDownManager.start(seconds: remainingSecondsStore - timePassed)
+                        playerState = .playing
+                        // print("session is still active with remaining", countDownManager.remaining)
+                    } else {
+                        sessionStateStore = SessionStateStopped
+                        remainingSecondsStore = 0
+                        playerState = .stopped
+                    }
+                }
+                
+                // print("app is restored with", playerState, countDownManager.remaining, eternalSessionDuration, sessionSetBackTimeStore, sessionDurationMinutes)
+            } else if phase == .background {
+                remainingSecondsStore = countDownManager.remaining
+                countDownManager.stop()
+                
+                sessionSetBackTimeStore = Date().timeIntervalSince1970
+                switch playerState {
+                case .stopped:
+                    sessionStateStore = SessionStateStopped
+                case .playing:
+                    sessionStateStore = SessionStateStarted
+                case .paused:
+                    sessionStateStore = SessionStatePaused
+                }
+                isSessionEternalStore = eternalSessionDuration
+                sessionDurationMinutesStore = sessionDurationMinutes
+                
+                // print("app is set back with " + sessionStateStore + ", " + String(remainingSecondsStore) + ", " + String(isSessionEternalStore) + ", " + String(sessionSetBackTimeStore) + ", " + String(sessionDurationMinutesStore))
+            }
+        }
     }
     
     func configure(sessionDurationMinutes: Int) {
@@ -111,11 +162,13 @@ struct ContentView: View {
     }
     
     func play() {
-        player.setState(state: .playing)
         playerState = .playing
         
-        if !eternalSessionDuration {
+        if eternalSessionDuration {
+            player.play(durationSeconds: 0)
+        } else {
             countDownManager.start(seconds: sessionDurationMinutes * 60)
+            player.play(durationSeconds: sessionDurationMinutes * 60)
         }
     }
     
@@ -123,12 +176,14 @@ struct ContentView: View {
         // resume
         if playerState == .paused {
             playerState = .playing
-            player.setState(state: .playing)
-            if !eternalSessionDuration {
+            if eternalSessionDuration {
+                player.play(durationSeconds: 0)
+            } else {
                 countDownManager.resume()
+                player.play(durationSeconds: countDownManager.remaining)
             }
         }
-
+        
         // pause
         else if playerState == .playing {
             playerState = .paused
@@ -153,7 +208,7 @@ struct ContentView: View {
         if self.playerState == .paused {
             return "Resume"
         }
-
+        
         return "Pause"
     }
     
@@ -163,7 +218,7 @@ struct ContentView: View {
         }
         
         let sec : Int
-
+        
         if playerState == .stopped {
             sec = sessionDurationMinutes * 60
         } else {

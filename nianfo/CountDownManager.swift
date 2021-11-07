@@ -13,9 +13,9 @@ enum CountDownState {
 
 class CountDownManager : ObservableObject {
     var state = CountDownState.stopped
-
+    
     var timer = Timer()
-
+    
     @Published var remaining = 0
     
     func start(seconds : Int) {
@@ -31,6 +31,10 @@ class CountDownManager : ObservableObject {
     func pause() {
         timer.invalidate()
         state = .stopped
+    }
+
+    func setRemaining(remaining: Int) {
+        self.remaining = remaining
     }
     
     func resume() {
