@@ -32,3 +32,7 @@ Chanting is a way to mediate, a way to focus, or simply being mindful.
 ## Chanting Session Screen
 
 ![Chanting Session Screen](/screenshot/chanting2.png)
+
+# Copy Right
+
+Copyright 2021, Daxin Chen Developer
